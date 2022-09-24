@@ -10,3 +10,8 @@
 - Using Machine learning libs specifically sklearn, Pandas.
 
 ### Streamlit website link: https://stevenwaheed-movie-recommendation-system-main-0rrq74.streamlitapp.com/
+
+### Streamlit website video:
+
+https://user-images.githubusercontent.com/83607748/192120817-9e14904a-fa24-44b9-bdcc-1d1b3628cc0f.mp4
+
