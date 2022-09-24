@@ -1,13 +1,13 @@
 import pandas as pd
 import streamlit as st
 
-import sklearn
+from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 
 movies_dataset = pd.read_csv('final df.csv')
 
-vectorizer = sklearn.feature_extraction.text.CountVectorizer(stop_words='english')
+vectorizer = CountVectorizer(stop_words='english')
 count_matrix = vectorizer.fit_transform(movies_dataset['document'])
 
 
