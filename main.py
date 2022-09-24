@@ -30,7 +30,7 @@ def get_recommendation(title, cos_sim=cos_similarity):
 
 def main():
     st.title("Movies Recommendation System")
-    st.write('This system uses "Cosine Similarity Algorithm" to compare the user\'s movie with the dataset and recommends some movies based on the similarity.')
+    st.write('- This system uses "Cosine Similarity Algorithm" to compare the user\'s movie with the dataset and recommends some movies based on the similarity.')
     try:
         title = st.text_input("- Enter the movie title:")
         if st.button("Check"):
