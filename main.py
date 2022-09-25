@@ -16,6 +16,15 @@ cos_similarity = cosine_similarity(count_matrix, count_matrix)
 indexs = pd.Series(movies_dataset.index, movies_dataset['title'])
 
 
+def get_all_titles(new_title):
+  title_list = []
+  for index in indexs.index:
+    if new_title in index or new_title == index:
+      title_list.append(index)
+
+  return title_list
+
+
 def get_recommendation(title, cos_sim=cos_similarity):
     title_list = get_all_titles(title)
 
