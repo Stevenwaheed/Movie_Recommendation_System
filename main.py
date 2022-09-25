@@ -39,7 +39,7 @@ def Extract_Similarity_Scores(similarity_scores):
 
 def main():
     st.title("Movies Recommendation System")
-    st.write('- This system uses "Cosine Similarity Algorithm" to compare the user\'s movie with the dataset and recommends some movies based on the similarity.')
+    st.header('- This system uses "Cosine Similarity Algorithm" to compare the user\'s movie with the dataset and recommends some movies based on the similarity.')
     try:
         title = st.text_input("- Enter the movie title:")
         if st.button("Check"):
