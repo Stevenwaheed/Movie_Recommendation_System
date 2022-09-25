@@ -72,7 +72,7 @@ def main():
         movie, scores = get_recommendation(title.lower(), cos_similarity)
         Similarity_Scores = Extract_Similarity_Scores(scores)
 
-        mixture_movies_scores = pd.Series(Similarity_Scores, movies)
+        mixture_movies_scores = pd.Series(Similarity_Scores, movie)
 
         movie_data_frame = pd.DataFrame(mixture_movies_scores)
 
