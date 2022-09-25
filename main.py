@@ -45,7 +45,7 @@ def get_recommendation(title, cos_sim=cos_similarity):
       movies_idx = [ind[0] for ind in similarity_scores]
 
       # extract the movie's title depend on movie's index
-      movies = movies_data['title'].iloc[movies_idx]
+      movies = movies_dataset['title'].iloc[movies_idx]
       
       all_similar_movies.extend(movies)
       all_similar_scores.extend(similarity_scores)
