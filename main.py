@@ -76,7 +76,7 @@ def main():
 
         movie_data_frame = pd.DataFrame(mixture_movies_scores)
 
-        st.dataframe(movie_data_frame.head(20)[1:], 1000, 1000)
+        st.dataframe(movie_data_frame.head(20)[1:], 500, 1000)
             
 #     except Exception as e:
 #         st.write("Please make sure it is before 2016")
