@@ -20,7 +20,7 @@ def get_recommendation(title, cos_sim=cos_similarity):
     idx = indexs[title]
     similarity_scores = list(enumerate(cos_sim[idx]))
     similarity_scores = sorted(similarity_scores, key=lambda x: x[1], reverse=True)
-    similarity_scores = similarity_scores[1:11]
+    similarity_scores = similarity_scores[:11]
 
     movies_idx = [ind[0] for ind in similarity_scores]
     movies = movies_dataset['title'].iloc[movies_idx]
