@@ -25,7 +25,16 @@ def get_recommendation(title, cos_sim=cos_similarity):
     movies_idx = [ind[0] for ind in similarity_scores]
     movies = movies_dataset['title'].iloc[movies_idx]
 
-    return movies
+    return movies, similarity_scores
+
+
+def Extract_Similarity_Scores(similarity_scores):
+  score_list = []
+
+  for score in similarity_scores:
+    score_list.append(score[1])
+  
+  return score_list
 
 
 def main():
@@ -34,7 +43,14 @@ def main():
     try:
         title = st.text_input("- Enter the movie title:")
         if st.button("Check"):
-            st.write(get_recommendation(title.lower(), cos_similarity))
+            movie, scores = get_recommendation(title.lower(), cos_similarity)
+            Similarity_Scores = Extract_Similarity_Scores(scores)
+
+            movie_data_frame = pd.DataFrame(movie)
+            movie_data_frame['similarity_scores'] = Similarity_Scores
+            
+            st.write(movie_data_frame)
+            
     except Exception as e:
         st.write("Please make sure it is before 2016")
 
