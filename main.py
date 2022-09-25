@@ -57,20 +57,20 @@ def Extract_Similarity_Scores(similarity_scores):
 def main():
     st.title("Movies Recommendation System")
     st.write('- This system uses "Cosine Similarity Algorithm" to compare the user\'s movie with the dataset and recommends some movies based on the similarity.')
-    try:
-        title = st.text_input("- Enter the movie title:")
-        if st.button("Check"):
-            movie, scores = get_recommendation(title.lower(), cos_similarity)
-            Similarity_Scores = Extract_Similarity_Scores(scores)
+#     try:
+    title = st.text_input("- Enter the movie title:")
+    if st.button("Check"):
+        movie, scores = get_recommendation(title.lower(), cos_similarity)
+        Similarity_Scores = Extract_Similarity_Scores(scores)
+
+        mixture_movies_scores = pd.Series(Similarity_Scores, movies)
+
+        movie_data_frame = pd.DataFrame(mixture_movies_scores)
+
+        st.write(movie_data_frame.head(20)[1:])
             
-            mixture_movies_scores = pd.Series(Similarity_Scores, movies)
-            
-            movie_data_frame = pd.DataFrame(mixture_movies_scores)
-            
-            st.write(movie_data_frame.head(20)[1:])
-            
-    except Exception as e:
-        st.write("Please make sure it is before 2016")
+#     except Exception as e:
+#         st.write("Please make sure it is before 2016")
 
 if __name__ == '__main__':
     main()
