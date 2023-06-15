@@ -3,6 +3,7 @@
 <p id="description">This system uses "Cosine Similarity Algorithm" to compare the user's movie with the dataset and recommends some movies based on the similarity. In this notebook we perform data cleaning and feature engineering on the data then we make some data visualization. Using Machine learning libs specifically sklearn and pandas.</p>
 
 <h2>🚀 Demo</h2>
+
 https://user-images.githubusercontent.com/83607748/192120817-9e14904a-fa24-44b9-bdcc-1d1b3628cc0f.mp4
   
   
