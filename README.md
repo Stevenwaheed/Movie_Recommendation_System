@@ -12,6 +12,7 @@ https://user-images.githubusercontent.com/83607748/192120817-9e14904a-fa24-44b9-
 Here're some of the project's best features:
 
 *   Easy to Use
+*   Provide the user with various of movies
 
 <h2>🛠️ Installation Steps:</h2>
 
